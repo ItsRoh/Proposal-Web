@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+body{
+    margin:0;
+    background-color: yellow;
+    height: 100vh;
+    overflow:hidden;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Permanent marker',cursive;
+    position:relative;
+    animation:mymove 5s infinite;
+
+}
+h1{
+    font-size: 4vw;
+    color: black;
+}
+.calendar{
+    position:absolute;
+    top:0;
+    right:0;
+    background:linear-gradient(orange,bisque , yellow);
+    width:18vw;
+    height:18vw;
+    text-align: center;
+    border: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px red;
+    font-size: 2vw;
+    
+}
+.month{
+    margin:0;
+    padding:0.5vw;
+    background-color: rgb(204, 13, 13);
+    font-size: 2vw;
+    font-weight: bold;
+}
+.datee{
+    margin:0;
+    padding:0.5vw;
+    font-size: 4vw;
+    font-weight: bold;
+    font-family: 'Permanent marker',serif;
+}
+.day{
+    margin:0;
+    padding:0.5vw;
+    font-size: 2vw;
+}
+.year{
+    margin:0;
+    padding:0.5vw;
+    font-size: 2vw;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    margin: 0;
+    display: flex;
+    position: absolute;
+    top: 60vh;
+    left: 35vw;
+    height:4vw;
+    width:6vw;
+    background-color: chartreuse;
+    border-radius: 2vw;
+    box-shadow: 0 4px 8px green;
+    color: black;
+   
+}
+a{
+    text-decoration: none;
+    text-shadow: 0px 2px 4px gray;
+}
+.btn2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    margin: 0;
+    display: flex;
+    position: absolute;
+    top: 60vh;
+    left: 60vw;
+    height:4vw;
+    width:6vw;
+    background-color: red;
+    border-radius: 2vw;
+    box-shadow:0 4px 8px brown;
+    color: black;
+}
+.btn::before{
+    content: "";
+    position:absolute;
+    background-color: green;
+    width:0vw;
+    height:0vw;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 2vw;
+    transition: width 0.5s,height 0.5s;
+
+}
+.btn:hover::before{
+    width:6vw;
+    height:4vw;
+
+}
+.btn2::before{
+    content: "";
+    position:absolute;
+    background-color: rgb(221, 25, 25);
+    width:0vw;
+    height:0vw;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 2vw;
+    transition: width 0.5s,height 0.5s;
+
+}
+.btn2:hover::before{
+    width:6vw;
+    height:4vw;
+    
+
+}
+.btn div{
+    position:relative;
+    z-index: 1;
+}
+.btn2 div{
+    position:relative;
+    z-index: 1;
+}
+span{
+    background-color: black;
+    background: url("heart_PNG51130.png");
+    height: 124px;
+    width:120px;
+    background-size: cover;
+    pointer-events: none;;
+    position:absolute;
+    left:50%;
+    top: 50%;
+    animation:animate 8s linear;
+    
+
+}
+@keyframes animate{
+    0%{
+        transform: translate(-50%,-50%);
+        opacity:1;
+        filter: hue-rotate(0);
+    }
+    100%{
+        transform: translate(-50%,-5000%);
+        opacity:0;
+        filter: hue-rotate(1000deg);
+    }
+}
+@keyframes mymove{
+    from{background-color: yellow;} to {background-color: aqua;}
+}
