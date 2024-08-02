@@ -23,9 +23,10 @@ function fun(){
    clearTimeout(tame);
 
    const mbtn =document.querySelector(".btn2");
-   mbtn.style.position="absolute";
-    mbtn.style.top=60+"vh";
-    mbtn.style.left=60+"vw";
+   const cbtn=document.querySelector(".btn");
+   const bodyE1=document.querySelector("body");
+   bodyE1.removeChild(mbtn);
+   bodyE1.removeChild(cbtn);
 
 }
 
