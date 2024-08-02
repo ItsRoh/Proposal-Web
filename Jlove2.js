@@ -33,7 +33,6 @@ function fun2(){
     const mbtn =document.querySelector(".btn2");
     const mytop=Math.random()*90;
     const myleft=Math.random()*90;
-    
     mbtn.style.position="absolute";
     mbtn.style.top=mytop+"vh";
     mbtn.style.left=myleft+"vw";
